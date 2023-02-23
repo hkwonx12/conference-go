@@ -21,6 +21,14 @@ window.addEventListener('DOMContentLoaded', async () => {
       const response = await fetch(url);
 
       if (!response.ok) {
+       const alert = document.querySelector('#display-alert');
+       alert.innerHTML = `
+       <div class="alert alert-danger" role="alert">
+            Couldn't get conference.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+       `
         // Figure out what to do when the response is bad
       } else {
         const data = await response.json();
@@ -45,6 +53,14 @@ window.addEventListener('DOMContentLoaded', async () => {
       }
     } catch (e) {
         console.error(e);
+        const alert = document.querySelector('#display-alert');
+        alert.innerHTML= `
+        <div class="alert alert-danger" role="alert">
+                There was an error. ${e}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+         </div>
+
+        `
       // Figure out what to do if an error is raised
     }
 
