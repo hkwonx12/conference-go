@@ -1,11 +1,11 @@
 # conference-go
 
 ## Design
-External API 
-React Front End
-PostgreSQL Back End
-Microservices
-RabbitMQ
+* External API 
+* React Front End
+* PostgreSQL Back End
+* Microservices
+* RabbitMQ
 
 ## Intended Market
 This application is intended for the user to create and sign up for conferences 
